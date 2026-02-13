@@ -92,7 +92,7 @@ export function createAutoAttach(options: AutoAttachOptions = {}): AutoAttachIns
             // Visual feedback could be added here
         }
 
-        element.addEventListener('keydown', handleKeyDown);
+        element.addEventListener('keydown', handleKeyDown as EventListener);
         element.addEventListener('blur', handleBlur);
 
         onAttach?.(element);
