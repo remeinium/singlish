@@ -1,0 +1,76 @@
+# React Hooks
+
+The library provides a React hook to easily integrate Singlish typing into your React applications.
+
+## `useSinglishConverter`
+
+A hook that manages the state of a textarea input, handling cursor position, selection, and Singlish conversion automatically.
+
+```tsx
+import { useSinglishConverter } from '@remeinium/singlish';
+
+const { inputProps, value, toggle } = useSinglishConverter(options);
+```
+
+### Parameters
+
+`options` (`UseSinglishConverterOptions`, optional):
+
+```typescript
+interface UseSinglishConverterOptions {
+    /** Initial enabled state (default: false) */
+    enabled?: boolean;
+    /** Callback fired when conversion occurs */
+    onConvert?: (original: string, converted: string) => void;
+    /** Conversion options */
+    options?: ConversionOptions;
+    /** Initial input value (default: '') */
+    initialValue?: string;
+    /** Experimental mobile support (default: false) */
+    mobileSupport?: boolean;
+}
+```
+
+### Return Value
+
+The hook returns an object with the following properties:
+
+- **`inputProps`**: An object containing props to spread onto a `<textarea>` or `<input>`.
+  - `value`: The current value (controlled).
+  - `onChange`: Handler for text changes.
+  - `onKeyDown`: Handler for key presses (Singlish logic).
+  - `onPaste`: Handler for pasting.
+- **`value`** (`string`): The current text value.
+- **`setValue`** (`(value: string) => void`): Function to programmatically set the value.
+- **`enabled`** (`boolean`): Whether Singlish conversion is currently active.
+- **`toggle`** (`() => void`): Function to toggle Singlish on/off.
+- **`setEnabled`** (`(enabled: boolean) => void`): Function to set the enabled state explicitly.
+- **`convertAll`** (`() => void`): Function to convert the entire text content at once.
+- **`clear`** (`() => void`): Function to clear the input.
+
+### Example
+
+```tsx
+import { useSinglishConverter } from '@remeinium/singlish';
+
+export default function SinglishTextarea() {
+  const { inputProps, enabled, toggle } = useSinglishConverter({
+    enabled: true
+  });
+
+  return (
+    <div>
+      <div className="toolbar">
+        <button onClick={toggle}>
+          {enabled ? 'Singlish: ON' : 'Singlish: OFF'}
+        </button>
+      </div>
+      <textarea
+        {...inputProps}
+        className="w-full h-32 p-2 border rounded"
+        placeholder="Type in Singlish..."
+      />
+    </div>
+  );
+}
+```

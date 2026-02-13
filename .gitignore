@@ -1,2 +1,7 @@
 *:Zone.Identifier
 *.md
+node_modules/
+.next/
+docs/node_modules/
+docs/.next/
+dist/

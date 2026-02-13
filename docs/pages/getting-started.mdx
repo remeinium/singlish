@@ -1,0 +1,63 @@
+# Getting Started
+
+## Installation
+
+Install the package via your preferred package manager:
+
+```bash
+npm install @remeinium/singlish
+# or
+pnpm add @remeinium/singlish
+# or
+yarn add @remeinium/singlish
+```
+
+> **Note**: Replace `@remeinium/singlish` with the actual package name if different in your registry.
+
+## Basic Usage
+
+### Simple Text Conversion
+
+For simple, stateless conversion of a string (e.g., processing a document or a chat message):
+
+```typescript
+import { convertSinglishToSinhala } from '@remeinium/singlish';
+
+const text = 'mama gedhara yanawaa';
+const sinhala = convertSinglishToSinhala(text);
+
+console.log(sinhala); // "මම ගෙදර යනවා"
+```
+
+### Real-time Input (React)
+
+For interactive text input, use the `useSinglishConverter` hook. It handles cursor position, buffer management, and state updates automatically.
+
+```tsx
+import { useSinglishConverter } from '@remeinium/singlish';
+
+export default function InputField() {
+  const { inputProps, toggle, enabled } = useSinglishConverter({
+    enabled: true, // Start with Singlish enabled
+  });
+
+  return (
+    <div>
+        <textarea
+            {...inputProps}
+            placeholder="Type here (e.g. 'kohomadha')..."
+            rows={5}
+        />
+        <button onClick={toggle}>
+            {enabled ? 'Disable Singlish' : 'Enable Singlish'}
+        </button>
+    </div>
+  );
+}
+```
+
+## Next Steps
+
+- Explore the [Core Concepts](/core-concepts) to understand how the transliteration works.
+- Check the [API Reference](/reference) for detailed function signatures.
+- See the [Phonetic Map](/phonetic-map) for the full list of key mappings.

@@ -1,0 +1,75 @@
+# IME Engine
+
+The `SinglishIME` class provides a stateful engine for handling real-time input, such as typing in a text area. It manages a buffer of pending keystrokes to correctly handle multi-character sequences (e.g., `k` -> `ka`, `k` -> `kra`).
+
+## Class: `SinglishIME`
+
+```typescript
+import { SinglishIME } from '@remeinium/singlish';
+
+const ime = new SinglishIME();
+```
+
+### Methods
+
+#### `processKey`
+
+Processes a single key press and updates the internal buffer. Returns the result of the processing.
+
+```typescript
+processKey(key: string): ResolveResult
+```
+
+- **Parameters**: `key` (`string`) - The key pressed (e.g., 'a', 'k').
+- **Returns**: `ResolveResult` - The committed text and remaining buffer.
+
+#### `backspace`
+
+Removes the last character from the *internal buffer*.
+
+```typescript
+backspace(): boolean
+```
+
+- **Returns**: `boolean` - `true` if a character was removed from the buffer, `false` if the buffer was empty.
+
+#### `getSpeculativeDisplay`
+
+Returns the current "speculative" conversion of the pending buffer. This is what you show to the user while they are typing a partial sequence.
+
+```typescript
+getSpeculativeDisplay(): string
+```
+
+- **Returns**: `string` - The Sinhala representation of the current buffer.
+
+#### `flush`
+
+Forces the current buffer to be committed as Sinhala text.
+
+```typescript
+flush(): string
+```
+
+- **Returns**: `string` - The converted text.
+
+#### `reset`
+
+Clears the internal buffer and resets the state.
+
+```typescript
+reset(): void
+```
+
+## Types
+
+### `ResolveResult`
+
+```typescript
+interface ResolveResult {
+  /** Sinhala text to commit (may be empty if nothing is committable yet) */
+  toCommit: string;
+  /** Remaining Roman buffer (ambiguous tail that could extend further) */
+  remaining: string;
+}
+```

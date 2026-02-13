@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.resolveBuffer = exports.SinglishIME = exports.useSinglishConverter = exports.ZWJ_CHAR = exports.HAL_CHAR = exports.SPECIAL = exports.CONSONANTS = exports.VOWEL_MODIFIERS_MAP = exports.VOWELS = exports.segmentText = exports.containsSinhala = exports.isSinhalaChar = exports.convertLastWord = exports.convertWithMetadata = exports.convertSinglishToSinhala = void 0;
+var converter_1 = require("./converter");
+Object.defineProperty(exports, "convertSinglishToSinhala", { enumerable: true, get: function () { return converter_1.convertSinglishToSinhala; } });
+Object.defineProperty(exports, "convertWithMetadata", { enumerable: true, get: function () { return converter_1.convertWithMetadata; } });
+Object.defineProperty(exports, "convertLastWord", { enumerable: true, get: function () { return converter_1.convertLastWord; } });
+Object.defineProperty(exports, "isSinhalaChar", { enumerable: true, get: function () { return converter_1.isSinhalaChar; } });
+Object.defineProperty(exports, "containsSinhala", { enumerable: true, get: function () { return converter_1.containsSinhala; } });
+Object.defineProperty(exports, "segmentText", { enumerable: true, get: function () { return converter_1.segmentText; } });
+// Character mappings (for advanced usage)
+Object.defineProperty(exports, "VOWELS", { enumerable: true, get: function () { return converter_1.VOWELS; } });
+Object.defineProperty(exports, "VOWEL_MODIFIERS_MAP", { enumerable: true, get: function () { return converter_1.VOWEL_MODIFIERS_MAP; } });
+Object.defineProperty(exports, "CONSONANTS", { enumerable: true, get: function () { return converter_1.CONSONANTS; } });
+Object.defineProperty(exports, "SPECIAL", { enumerable: true, get: function () { return converter_1.SPECIAL; } });
+Object.defineProperty(exports, "HAL_CHAR", { enumerable: true, get: function () { return converter_1.HAL_CHAR; } });
+Object.defineProperty(exports, "ZWJ_CHAR", { enumerable: true, get: function () { return converter_1.ZWJ_CHAR; } });
+var hooks_1 = require("./hooks");
+Object.defineProperty(exports, "useSinglishConverter", { enumerable: true, get: function () { return hooks_1.useSinglishConverter; } });
+var ime_engine_1 = require("./ime-engine");
+Object.defineProperty(exports, "SinglishIME", { enumerable: true, get: function () { return ime_engine_1.SinglishIME; } });
+Object.defineProperty(exports, "resolveBuffer", { enumerable: true, get: function () { return ime_engine_1.resolveBuffer; } });
