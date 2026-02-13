@@ -1,7 +1,28 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+lib/
+out/
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 *:Zone.Identifier
-*.md
 node_modules/
 .next/
 docs/node_modules/
 docs/.next/
-dist/
+
+# Environment
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
