@@ -1,0 +1,46 @@
+# Contributing
+
+Thank you for your interest in contributing to Singlish! We welcome contributions from the community to help improve the accuracy and performance of the engine.
+
+## Getting Started
+
+1. **Fork the repository** on GitHub.
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/singlish.git
+   cd singlish
+   ```
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+## Development Workflow
+
+### Project Structure
+
+- `converter.ts`: Core logic for Singlish-to-Sinhala conversion.
+- `ime-engine.ts`: Stateful IME class for real-time input.
+- `hooks.ts`: React integration.
+- `NativeMap.txt`: Reference for phonetic mappings.
+
+### Making Changes
+
+1. **Update Mappings**: If you find a missing phonetic mapping, check `converter.ts`. The `SINGLISH_TO_PHONEME` constant defines the raw tokenization rules.
+2. **Verify Changes**: Ensure your changes don't break existing conversions. We recommend adding a test case for any new mapping.
+
+### Coding Standards
+
+- Use **TypeScript** for all new code.
+- Follow the existing code style (indentation, variable naming).
+- Keep functions pure where possible, especially in the converter.
+
+## Submitting a Pull Request
+
+1. Push your changes to your fork.
+2. Open a Pull Request against the `main` branch of the original repository.
+3. Describe your changes clearly. If you are fixing a bug, please link the issue.
+
+## License
+
+By contributing, you agree that your contributions will be licensed under the project's MIT License.

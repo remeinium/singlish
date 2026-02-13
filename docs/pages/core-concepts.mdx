@@ -1,0 +1,42 @@
+# Core Concepts
+
+Understanding how Singlish maps English characters to Sinhala phonemes is key to using the library effectively.
+
+## Phonetic Transliteration
+
+Singlish uses a phonetic mapping scheme. This means you type the sound of the letter rather than the key position (as in Wijesekara layout).
+
+- **Short vowels**: `a` (අ), `i` (ඉ), `u` (උ), `e` (එ), `o` (ඔ)
+- **Long vowels**: Double the letter (`aa` -> ආ, `ii` -> ඊ)
+- **Consonants**: Standard mappings (`k` -> ක, `g` -> ග)
+- **Aspirated (Mahaprana)**: Add `h` (`kh` -> ඛ, `bh` -> භ)
+- **Retroflex (Murdhaja)**: Capitalize (`T` -> ට, `D` -> ඩ, `N` -> ණ)
+
+## Greedy Tokenization
+
+The engine uses a **greedy tokenization** strategy. It always tries to match the longest possible pattern from the current position.
+
+**Example**: `zdha` vs `z` + `d` + `h` + `a`
+
+The engine checks patterns in descending order of length:
+1. Does `zdha` match a known pattern? **Yes** (Matches `SANYAKA_DHA` -> ඳ).
+2. It consumes all 4 characters and outputs ඳ.
+
+If you typed `zda`:
+1. Does `zda` match? **Yes** (Matches `SANYAKA_DA` -> ඬ).
+
+If you typed `ka`:
+1. Does `ka` match? No (assuming `ka` isn't a single token in the map, but `k` is).
+2. It consumes `k` -> ක.
+3. Then consumes `a` (which is an inherent vowel in Sinhala script logic, removing the *hal* mark).
+
+## The Trie Structure
+
+To support real-time typing efficiently, Singlish uses a **Prefix Trie**. This allows the engine to:
+- Instantly validate if the current input *could* be the start of a longer sequence.
+- "Look ahead" without converting prematurely.
+
+For example, when you type `k`, the engine converts it to `ක්` (with *hal*).
+If you then type `a`, the engine sees `ka`, backtracks/updates the buffer, and produces `ක`.
+
+This buffering is handled transparently by the `SinglishIME` class and the `useSinglishConverter` hook.
