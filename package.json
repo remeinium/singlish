@@ -1,0 +1,73 @@
+{
+  "name": "@siyabasa/singlish",
+  "version": "1.0.1",
+  "description": "Deterministic Singlish-to-Sinhala transliteration engine with phonetic precision and zero-latency IME.",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts --minify",
+    "lint": "eslint src/**/*.ts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "singlish",
+    "sinhala",
+    "transliteration",
+    "ime",
+    "unicode",
+    "sri-lanka",
+    "i18n",
+    "siyabasa",
+    "remeinium"
+  ],
+  "author": "Remeinium Siyabasa Labs <support@remeinium.com>",
+  "license": "ROSL-1.0",
+  "homepage": "https://labs.remeinium.com/siyabasa/singlish",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remeinium/singlish.git"
+  },
+  "bugs": {
+    "url": "https://github.com/remeinium/singlish/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^1.6.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

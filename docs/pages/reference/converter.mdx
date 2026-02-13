@@ -1,0 +1,103 @@
+# Converter (Core)
+
+The core module provides stateless functions for converting Singlish strings to Sinhala.
+
+## Functions
+
+### `convertSinglishToSinhala`
+
+Main conversion function. Converts a given Singlish string into Sinhala Unicode text.
+
+```typescript
+function convertSinglishToSinhala(
+  text: string,
+  options?: ConversionOptions
+): string
+```
+
+#### Parameters
+
+- `text` (`string`): The input Singlish text.
+- `options` (`ConversionOptions`, optional): Configuration for conversion.
+
+#### Returns
+
+- `string`: The converted Sinhala text.
+
+---
+
+### `convertLastWord`
+
+Converts only the last word in a string, preserving the prefix. Useful for simple input handling where only the current word should be processed.
+
+```typescript
+function convertLastWord(
+  text: string,
+  options?: ConversionOptions
+): string
+```
+
+#### Parameters
+
+- `text` (`string`): The input text containing multiple words.
+- `options` (`ConversionOptions`, optional): Configuration.
+
+#### Returns
+
+- `string`: The text with only the last word converted.
+
+---
+
+### `isSinhalaChar`
+
+Checks if a single character is within the Sinhala Unicode block.
+
+```typescript
+function isSinhalaChar(char: string): boolean
+```
+
+#### Parameters
+
+- `char` (`string`): The character to check.
+
+#### Returns
+
+- `boolean`: `true` if the character is Sinhala.
+
+---
+
+### `containsSinhala`
+
+Checks if a string contains *any* Sinhala characters.
+
+```typescript
+function containsSinhala(text: string): boolean
+```
+
+#### Parameters
+
+- `text` (`string`): The input string.
+
+#### Returns
+
+- `boolean`: `true` if at least one character is Sinhala.
+
+## Types
+
+### `ConversionOptions`
+
+```typescript
+interface ConversionOptions {
+  /**
+   * Whether to preserve non-Sinhala characters (numbers, punctuation, English)
+   * @default true
+   */
+  preserveNonSinhala?: boolean;
+
+  /**
+   * Maximum pattern length to attempt matching
+   * @default 4
+   */
+  maxPatternLength?: number;
+}
+```

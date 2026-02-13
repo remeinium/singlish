@@ -117,10 +117,6 @@ const VOWEL_PATTERNS = new Set([
 ]);
 
 
-const SPECIAL_PATTERNS = new Set([
-    'x', 'X', 'H', 'Lu',
-]);
-
 // Buffer resolution
 
 export interface ResolveResult {

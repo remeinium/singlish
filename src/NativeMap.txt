@@ -1,0 +1,99 @@
+අ - a
+ආ - aa
+ඇ - A
+ඈ - Aa හෝ AA
+ඉ - i
+ඊ - ii
+උ - u
+ඌ - uu
+ඍ - R
+ඎ - Ru
+එ - e
+ඒ - ee
+ඓ - ai
+ඔ - o
+ඕ - oo
+ඖ - au හෝ ou
+
+ව්‍යංජන අක්ෂර යතුරුකරන ආකාරය
+සාමාන්‍ය ශබ්දානුකූල ඉංග්‍රීසි අකුරු වලින් ලිවිය හැක. මුර්ධජ අකුරු ලිවීම සඳහා ශබ්දානුකූ ඉංග්‍රීසි අකුරේ කැපිටල් අකුරු භාවිතා කෙරේ. ’ද’ සඳහා පමණක් dha හෝ q යෙදේ.
+(How to Type Consonants
+These can be typed using standard phonetic English letters. Capital English letters are used to represent retroflex (Murdhaja) characters. For the character 'ද' (da) specifically, 'dha' or 'q' is used.)
+
+ක - ka
+ග - ga
+ච - cha
+ජ - ja
+ට - ta
+ඩ - da
+ත - tha
+ද - dha හෝ qa
+න - na
+ණ - Na
+ප - pa
+බ - ba
+ම - ma
+ය - ya
+ර - ra
+ල - la
+ළ - La
+ව - wa හෝ va
+ස - sa
+ශ - sha
+ෂ - Sa හෝ Sha
+හ - ha
+ෆ - fa
+මහප්‍රාණ අක්ෂර යතුරුකරන ආකාරය
+සාමාන්‍ය ශබ්දානුකූල ඉංග්‍රීසි අකුරක් සමඟ h අකුරක් යොදා මහප්‍රාණ අක්ෂර යතුරු කළ හැක. ‘ඨ’ සහ ‘ඪ’ පමණක් ශබ්දානුකූ ඉංග්‍රීසි අකුරේ කැපිටල් අකුරු භාවිතා කෙරේ.
+(How to Type Aspirate (Mahaprana) Characters
+Aspirate characters can be typed by adding the letter 'h' to a standard phonetic English letter. Only for the characters 'ඨ' and 'ඪ' are capital phonetic English letters used.)
+
+ඛ - kha
+ඝ - gha
+ඡ - chha
+ඨ - Ta
+ඪ - Da
+ථ - thha
+ධ - dhha
+ඵ - pha
+භ - bha
+සඤ්ඤක සහ වෙනත් අක්ෂර යතුරුකරන ආකාරය
+සාමාන්‍ය ශබ්දානුකූල ඉංග්‍රීසි අකුර ඉදිරියට z අකුරක් යොදා සඤ්ඤත අක්ෂර යතුරු කළ හැක. 'ඹ' සඳහා පමණක් කැපිටල් B යෙදේ.
+(How to Type Pre-nasalized (Sanyaka) and Other Characters
+Pre-nasalized characters can be typed by placing the letter 'z' before a standard phonetic English letter. For the character 'ඹ' (mba) specifically, a capital 'B' is used.)
+
+ඟ - zga
+ඦ - zja
+ඬ - zda
+ඳ - zdha, zqa
+ඤ - zka
+ඥ - zha
+ඹ - Ba
+ළු - Lu
+පිළි සමඟ ව්‍යංජන අක්ෂර යතුරුකරන ආකාරය
+සාමාන්‍ය ශබ්දානුකූල ඉංග්‍රීසි අකුරු සංයෝජනයෙන් යතුරු කළ හැක. දීර්ඝ පිළි යෙදීමේදී එකම ඉංග්‍රීසි අකුර දෙවරක් යෙදේ. ‘ැ’ සඳහා පමණක් ඉංග්‍රීසි කැපිටල් අකුරු A යෙදේ.
+(How to Type Consonants with Vowel Signs (Pili)
+These can be typed using combinations of standard phonetic English letters. To apply long vowel signs, the corresponding English letter is typed twice. For the 'ැ' (ae) vowel sign specifically, a capital 'A' is used.)
+
+ක් - k
+ක - ka
+කා - kaa
+කැ - kA
+කෑ - kAa හෝ kAA
+කි - ki
+කී - kii
+කු - ku
+කූ - kuu
+කෘ - kru
+කෲ - kruu
+කෙ - ke
+කේ - kee
+කෛ - kai
+කො - ko
+කෝ - koo
+කෞ - kau
+කඃ - kaH
+කං - kax හෝ kazn
+කඞ - kaX
+ක්‍ය - kya
+ක්‍ර - kra

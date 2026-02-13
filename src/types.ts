@@ -134,3 +134,66 @@ export interface UseSinglishConverterReturn {
      */
     flushPending: () => string;
 }
+
+export interface AutoAttachOptions {
+    /**
+     * Start with auto-attach enabled
+     * @default true
+     */
+    enabled?: boolean;
+
+    /**
+     * CSS selector for elements to attach to
+     * @default 'input[type="text"], input[type="search"], textarea'
+     */
+    selector?: string;
+
+    /**
+     * CSS selector for elements to exclude
+     */
+    exclude?: string;
+
+    /**
+     * Callback when element is attached
+     */
+    onAttach?: (element: HTMLElement) => void;
+}
+
+export interface AutoAttachInstance {
+    start: () => void;
+    stop: () => void;
+    isRunning: () => boolean;
+    toggle: () => void;
+}
+
+export interface UIToggleOptions {
+    /**
+     * Position of the toggle button
+     * @default 'bottom-right'
+     */
+    position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+
+    /**
+     * Theme for the toggle button
+     * @default 'auto'
+     */
+    theme?: 'light' | 'dark' | 'auto';
+
+    /**
+     * Show text label alongside icon
+     * @default true
+     */
+    showLabel?: boolean;
+
+    /**
+     * Callback when toggle state changes
+     */
+    onToggle?: (enabled: boolean) => void;
+}
+
+export interface UIToggleInstance {
+    mount: (container?: HTMLElement) => void;
+    unmount: () => void;
+    setEnabled: (enabled: boolean) => void;
+    getEnabled: () => boolean;
+}
