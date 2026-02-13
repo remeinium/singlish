@@ -1,6 +1,6 @@
 {
   "name": "@siyabasa/singlish",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Industry-grade Singlish to Sinhala IME Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
