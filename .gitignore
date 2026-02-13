@@ -6,3 +6,4 @@ docs/.next/
 dist/
 .gitignore
 singlish/
+dist/
